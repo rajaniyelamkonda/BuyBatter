@@ -1,0 +1,9 @@
+.mainDiv{
+    background-color:white; 
+    height : 100vh; 
+    z-index:2; 
+    border:1px green solid;
+    padding-left: 0px;
+    padding-right: 0px;
+
+}

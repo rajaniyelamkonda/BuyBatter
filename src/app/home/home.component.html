@@ -1,0 +1,32 @@
+<ngb-tabset>
+  <ngb-tab>
+    <ng-template ngbTabTitle><b>Batter Items</b></ng-template>
+    <ng-template ngbTabContent>
+      <div *ngFor="let item1 of batterItems">
+        <div *ngIf = "item1.type =='Batter'">
+          <div class="mainImage" >
+              <img src={{item1.url}} class="img-responsive" alt={{item1.name}}>
+              <p class="lbl"><b>{{item1.name}}</b>
+              <span class="price"><b>Rs </b>{{item1.price}}<b> per Kg.</b></span></p>
+          </div>
+          <app-display-orders [item]="item1.name"></app-display-orders>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab>
+    <ng-template ngbTabTitle><b>Flour Items</b></ng-template>
+    <ng-template ngbTabContent>
+      <div *ngFor="let item1 of batterItems">
+        <div *ngIf = "item1.type =='Flour'">
+          <div class="mainImage" >
+              <img src={{item1.url}} class="img-responsive" alt={{item1.name}}>
+              <p class="lbl"><b>{{item1.name}}</b>
+              <span class="price"><b>Rs </b>{{item1.price}}<b> per Kg.</b></span></p>
+          </div>
+          <app-display-orders [item]="item1.name"></app-display-orders>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>

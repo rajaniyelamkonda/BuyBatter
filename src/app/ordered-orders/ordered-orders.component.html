@@ -1,0 +1,19 @@
+<div class="container-fluid" style="height:80vh">
+  <div *ngIf="orders">
+    <div *ngIf="orders.length == 0"><b>You do  have not placed any Orders</b></div>
+    <table *ngIf="orders.length != 0" class="table" style="width:60%">
+      <tr>
+        <th>order type</th>
+        <th>dd/mm/yyyy</th>
+        <th>No. of Packets</th>
+        <th>Price</th>
+      </tr>
+      <tr *ngFor="let order of orders">
+        <td>{{order.name}}</td>
+          <td>{{order.date}}</td>
+          <td>{{order.packets}}</td>
+          <td>{{order.price*order.packets}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container-fluid" style="height:80vh">
+  <div *ngIf="orders">
+      <div *ngIf="orders.length == 0"><b>You do not have any Selected orders</b></div>
+    <div *ngIf="orders.length != 0">
+    <table class="table" style="width:60%">
+      <tr>
+        <th>order type</th>
+        <th>dd/mm/yyyy</th>
+        <th>No. of Packets</th>
+        <th>Price</th>
+      </tr>
+      <tr *ngFor="let order of orders">
+        <td>{{order.name}}</td>
+        <td>{{order.date.day}}/{{order.date.month}}/{{order.date.year}}</td>
+        <td>{{order.packets}}</td>
+        <td>{{order.price*order.packets}}</td>
+      </tr>
+    </table>
+    <div><b>Total Price : </b>{{totalPrice}}</div>
+    <div>
+      <button type="submit" class="payButton btn btn-success" (click)="pay()">Pay</button> 
+    </div>
+  </div>
+  </div>
+</div>

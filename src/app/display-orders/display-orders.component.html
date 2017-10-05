@@ -1,0 +1,30 @@
+<div>
+  <div class="container-fluid row" *ngFor="let order of orders">
+    <div *ngIf="order.name == item" class="col-lg-4 offset-lg-4 mx-auto col-md-5 offset-md-4 col-sm-8 offset-sm-2 col-10 offset-1" 
+          style="border:1px solid darkgreen;margin-bottom:7px;color:blue;">
+      <div class="row">
+        <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-3 col-4">
+          {{monthName[order.date.month-1]}}
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-1 col-1">
+          {{order.date.day}}
+        </div>
+        <div class="col-lg-1 offset-lg-3 col-md-1 offset-md-1 offset-sm-2 col-sm-1 col-1 offset-1 mx-auto">
+          <button type="button" (click)="deletePacket(order)"><b style="color:blue">-</b></button>
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-1 col-1 mx-auto">
+          {{order.packets}}
+        </div>
+        <div class="col-lg-1 col-md-2 col-sm-1 col-1 mx-auto">
+          <button type="button" (click)="addPackets(order)"><b style="color:blue">+</b></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div [style.display]="buttonCartdisp" class="dateButtondDiv">
+    <button type="button" class=" dateButtons btn btn-success" (click)="open()">Add To Cart</button>
+  </div>
+  <div [style.display]="buttonDatedisp" class="dateButtondDiv">
+    <button type="button" class="dateButtons btn btn-success" (click)="open()">Add Another Date</button>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div #calendar>
+    <div class ="modal-header" style = "background-color:green">
+        <h2>{{Choosedate.date.day}}</h2>
+        <h3>{{monthName[Choosedate.date.month-1]}}</h3>
+    </div>
+    <div class = "modal-body" style ="margin:0 auto; display:table">
+        <ngb-datepicker  style ="margin:0 auto; display:table-cell " #dp [(ngModel)]="Choosedate.date"></ngb-datepicker>
+    </div>
+    <div class ="modal-footer">
+        <button type = "button" class = "btn btn-danger" (click)="close()" >Cancel</button>
+        <button type = "button" class = "btn btn-success" (click) = "AddDate()">OK</button>
+    </div>
+</div>

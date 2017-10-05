@@ -1,0 +1,24 @@
+.mainImage{
+    display:table;
+    margin: 0 auto;
+    width : 70%;
+    height:50%;
+}
+.img-responsive{
+    position:relative;
+    width:100%;
+    height:40%;
+    display: block;
+    margin: 0 auto;
+}
+.lbl{    
+    color:blue;
+}
+.price{
+    float: right;
+    color:blue;
+}
+#batterTitle{
+    background-color:green;
+    color:blue;
+}
