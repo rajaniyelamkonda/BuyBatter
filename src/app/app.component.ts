@@ -33,4 +33,5 @@ export class AppComponent implements OnInit {
     this.displayDiv = this.display == true ? true : false;
     this.display = false;
   }
-}
+  
+ }

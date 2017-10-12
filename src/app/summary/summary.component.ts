@@ -30,7 +30,6 @@ export class SummaryComponent implements OnInit {
     this.orderService.addOrderstoWeb(this.orders).subscribe(res => 
           { this.orders.length = 0; 
             this.paid = true;
-            console.log(this.paid);
             this.appComponent.alertClosed = true;
             this.router.navigate(['/NavTabs']);
           });

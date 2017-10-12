@@ -20,4 +20,8 @@ export class ToggleMenuComponent {
   ToggleClick(){
     this.toggle = false;
   }
+  OnSwipeleft(){
+    console.log("Swipe left");
+    this.toggle = false;
+  }
 }

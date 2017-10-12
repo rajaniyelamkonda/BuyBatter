@@ -1,5 +1,5 @@
 <div class = "row">
-<div class = "mainDiv col-lg-2 col-md-3 col-sm-4 col-xs-7 col-10" [@toggleState]="toggle">
+<div class = "mainDiv col-lg-2 col-md-3 col-sm-4 col-xs-7 col-10" [@toggleState]="toggle" (swipeLeft) = "OnSwipeleft()">
   <div class="dropdown-header" style = "background:green; height:42px; width:100%">Menu Content</div>
   <div (click) = "ToggleClick()"><a routerLink='./ordered' class="dropdown-item">Placed Orders</a></div>
   <div (click) = "ToggleClick()"><a routerLink="./summary" class="dropdown-item">Selected Orders</a></div>

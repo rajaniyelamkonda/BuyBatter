@@ -23,6 +23,9 @@ import { OrderedOrdersComponent } from './ordered-orders/ordered-orders.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToggleMenuComponent } from './toggle-menu/toggle-menu.component';
 
+//hammerjs for swiping div
+import 'hammerjs';
+
 
 @NgModule({
   declarations: [AppComponent, MenuComponent, NdbDateComponent, SummaryComponent,

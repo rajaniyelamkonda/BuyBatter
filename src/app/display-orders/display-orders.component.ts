@@ -32,13 +32,14 @@ export class DisplayOrdersComponent implements OnInit {
     this.displayButtons();
   }
   displayButtons():void{
-    if (this.orders.length != 0) {
+    this.buttonCartdisp = "block";
+    this.buttonDatedisp = "none";
+    for (var i=0;i<this.orders.length;i++) {
+      if(this.orders[i].name == this.item){
       this.buttonCartdisp = "none";
-      this.buttonDatedisp = "block"
-    }
-    else {
-      this.buttonCartdisp = "block";
-      this.buttonDatedisp = "none"
+      this.buttonDatedisp = "block";
+      break;
+      }
     }
   }
   AddDateAndPackets(order: OrderClass) {
