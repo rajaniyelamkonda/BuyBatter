@@ -1,3 +1,5 @@
+This angular 2 simple application. In this app we can order batter online. We can customise the no. of packet and the date when we we want the batter.
+
 Prerequisites:
 --------------
 1. Node
